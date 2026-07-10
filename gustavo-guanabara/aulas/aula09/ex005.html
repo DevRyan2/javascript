@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primeiros passos com DOM</title>
+    <style>
+
+        body {
+            background-color: rgb(68, 103, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Iniciando estudos com DOM</h1>
+
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo usar <strong>DOM</strong> em JavaScript.</p>
+
+    <div id="msg">Clique em mim</div>
+    <div name="msg"></div>
+    <div class="msg"></div>
+    <div id="query-selector"></div>
+
+    <script>
+
+        var corpo = window.document.body
+
+        var p1 = window.document.getElementsByTagName('p')[1]
+
+        window.document.write(p1.innerHTML)
+
+        //  POR ID
+
+        var d = window.document.getElementById('msg')
+
+        d.style.background = 'green'
+        
+        
+        window.document.getElementById('msg').innerText = 'Utilizando "id"'
+
+        // POR NAME
+
+        var d = window.document.getElementsByName('msg')[0]
+
+        d.innerText = 'Utilizando "name"'
+
+        d.style.color = 'black'
+        d.style.background = 'yellow' 
+
+        // POR CLASS
+
+        
+        var d = window.document.getElementsByClassName('msg')[0]
+
+        d.style.background = 'black'
+
+        d.innerText = 'Utilizando "class"'
+
+        // UTILIZANDO QUERY SELECTOR
+
+        var d = window.document.querySelector('div#query-selector')
+
+        d.innerText = 'Utilizando "querySelector"'
+
+        d.style.color = 'white'
+        d.style.background = 'red'
+
+    </script>
+    
+</body>
+</html>
