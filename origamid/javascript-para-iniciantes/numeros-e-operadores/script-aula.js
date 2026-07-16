@@ -1,33 +1,29 @@
-var nome = 'Ryan';
+var total = 10 + 5 + 10;
 
-var idade = 19;
+var divisao = 200 / 5;
 
-var simbolo = Symbol();
+var modulo = 3872983892 % 3;
 
-console.log(typeof simbolo);
+console.log(total);
+console.log(divisao);
+console.log(modulo);
 
-var nome = 'Ryan';
-var sobrenome = 'Souza';
-var nomeCompleto = nome + ' ' + sobrenome;
-console.log(nomeCompleto);
+var testeNaN = '100' / 2;
 
-// var gols = 1000;
-// var frase = 'Romário fez ' + gols + ' gols';
-// console.log(typeof frase);
+console.log(isNaN(testeNaN));
 
-var ano = 2006;
-var mes = 8;
-console.log(ano + mes);
+var soma1 = 10 + 10 + 20 + (30 * 4) / (2 + 10);
 
-var melhor = 'Teste';
-var frase1 = 'Esse é o "melhor" jogo';
-console.log(frase1);
+console.log(soma1);
 
-console.log('Isso mesmo');
+var x = 5;
 
-var gols = 1000;
-var frase1 = 'Romário fez ' + gols + ' gols';
-var frase2 = `Romário fez ${gols * 2} gols`;
+console.log(x--);
 
-console.log(frase1);
-console.log(frase2);
+console.log(x);
+
+var idade = +'19';
+
+var somaIdade = 5;
+
+console.log(idade);

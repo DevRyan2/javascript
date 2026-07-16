@@ -1,32 +1,30 @@
-// Declare uma variável contendo uma string
+// Qual o resultado da seguinte expressão?
+var total = 10 + (5 * 2) / 2 + 20;
+// vai dar 35 no total
+console.log(total);
 
-var string = 'Essa é uma string';
-console.log(typeof string);
+// Crie duas expressões que retornem NaN
 
-// Declare uma variável contendo um número dentro de uma string
+var NaN1 = +'80kg' + 90;
+console.log(NaN1);
 
-var ano = '2006';
-console.log(typeof ano);
+var NaN2 = 'teste' - 2;
+console.log(NaN2)
 
-// Declare uma variável com a sua idade
+// Somar a string '200' com o número 50 e retornar 250
 
-var idade = 19;
+var soma1 = +'200' + 50;
+console.log(soma1);
 
-// Declare duas variáveis, uma com seu nome
-// e outra com seu sobrenome e some as mesmas
+// Incremente o número 5 e retorne o seu valor incrementado
 
-var nome = 'Ryan';
-var sobrenome = 'Carlos';
-var nomeCompleto = `${nome} ${sobrenome}`;
-console.log(nomeCompleto);
+var n5 = 5;
+console.log(++n5);
 
-// Coloque a seguinte frase em uma variável: It's time
+// Como dividir o peso por 2?
 
-var frase1 = `It's time`;
-console.log(frase1);
+var numero = +'80' / 2;
+var unidade = 'kg';
+var peso = numero + unidade; // '80kg'
 
-// Verifique o tipo da variável que contém o seu nome
-
-var verificarTipoNome = typeof nome;
-
-console.log(verificarTipoNome);
+console.log(peso)
