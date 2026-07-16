@@ -12,7 +12,7 @@ var container = document.querySelector('#container')
 
 container.appendChild(el)
 
-// inserBefore - Insere antes
+// insertBefore - Insere antes
 
 var el2 = document.createElement('div')
 
