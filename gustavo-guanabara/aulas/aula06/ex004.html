@@ -1,28 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                font: normal 20pt Arial;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var nome = window.prompt('Seu nome: ');
 
-        body {
-            font: normal 20pt Arial;
-        }
+            document.write(
+                `Olá, <strong>${nome}!</strong> Seu nome tem ${nome.length} letras. <br>`,
+            );
+            document.write(
+                `Seu nome em maiúsculas é ${nome.toUpperCase()} <br>`,
+            );
+            document.write(
+                `Seu nome em minúsculas é ${nome.toLocaleLowerCase()} <br>`,
+            );
 
-    </style>
-</head>
-<body>
-    
-    <script>
+            var n1 = 1540.5
 
-        var nome = window.prompt('Seu nome: ')
+            var numeroFormatado = n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
 
-        document.write(`Olá, <strong>${nome}!</strong> Seu nome tem ${nome.length} letras. <br>`)
-        document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()} <br>`)
-        document.write(`Seu nome em minúsculas é ${nome.toLocaleLowerCase()}`)
-
-    </script>
-
-</body>
+            document.write(`Seu número formatado para pt-br é ${numeroFormatado}`)
+        </script>
+    </body>
 </html>
