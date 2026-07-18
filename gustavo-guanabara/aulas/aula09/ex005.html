@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>primeiros passos com DOM</title>
+    <title>Primeiros passos com DOM</title>
     <style>
 
         body {
-            background-color: rgb(68, 103, 199);
+            background-color: rgb(7, 35, 66);
             color: white;
-            font: normal 18pt Arial;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3em;
+            font-weight: normal;
         }
 
     </style>
@@ -19,56 +22,62 @@
     <h1>Iniciando estudos com DOM</h1>
 
     <p>Aqui vai o resultado</p>
-    <p>Aprendendo usar <strong>DOM</strong> em JavaScript.</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
 
-    <div id="msg">Clique em mim</div>
-    <div name="msg"></div>
-    <div class="msg"></div>
-    <div id="query-selector"></div>
+    <div>Clique em mim</div>
+    <div></div>
+    <div id="id"></div>
+    <div name="name"></div>
+    <div class="class"></div>
+    <div id="seletor"></div>
 
     <script>
 
         var corpo = window.document.body
 
-        var p1 = window.document.getElementsByTagName('p')[1]
+        // Utilizando tagName
 
-        window.document.write(p1.innerHTML)
+        var d = window.document.getElementsByTagName('div')[1]
 
-        //  POR ID
+        d.innerText = `Utilizando por getElementsByTagName( )`
 
-        var d = window.document.getElementById('msg')
+        d.style.color = 'gray'
 
-        d.style.background = 'green'
+        //==========================================
         
-        
-        window.document.getElementById('msg').innerText = 'Utilizando "id"'
+        // Utilizando por id
 
-        // POR NAME
+        var div = window.document.getElementById('id')
+        div.style.color = 'yellow'
+        div.innerText = `Utilizando getElementById( )`
 
-        var d = window.document.getElementsByName('msg')[0]
+        // =============================================
 
-        d.innerText = 'Utilizando "name"'
+        // Utilizando por name
 
-        d.style.color = 'black'
-        d.style.background = 'yellow' 
+        var divName = window.document.getElementsByName('name')[0]
 
-        // POR CLASS
+        divName.innerText = `Utilizando por getElementsByName( )`
 
-        
-        var d = window.document.getElementsByClassName('msg')[0]
+        //=============================================
 
-        d.style.background = 'black'
+        // Utilizando por class
 
-        d.innerText = 'Utilizando "class"'
+        var divClass = window.document.getElementsByClassName('class')[0]
 
-        // UTILIZANDO QUERY SELECTOR
+        divClass.innerText = `Utilizando getElementByClassName( )`
 
-        var d = window.document.querySelector('div#query-selector')
+        divClass.style.color = 'blue'
 
-        d.innerText = 'Utilizando "querySelector"'
+        //===============================================
 
-        d.style.color = 'white'
-        d.style.background = 'red'
+        // Utilizando seletor
+
+        var divSeletor = window.document.querySelector('div#seletor')
+
+        divSeletor.style.color = 'purple'
+
+        divSeletor.innerText = `Utilizando querySelector( )`
 
     </script>
     
