@@ -1,74 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos DOM</title>
-    <style>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Eventos DOM</title>
+        <style>
+            body {
+                background-color: rgb(214, 214, 214);
+            }
 
-        * {
-            padding: 0px;
-            margin: 0px;
-            box-sizing: border-box;
-        }
+            div#click, div#mouseenter {
+                display: inline-block;
 
-        div#area {
-            display: flex;
-            
-            align-items: center;
-            justify-content: center;
-            
-            width: 200px;
-            height: 200px;
-            margin: 5px 0px 0px 5px;
-            
-            background-color: rgb(17, 122, 17);
-            color: white;
+                width: 200px;
+                height: 200px;
+                margin-right: 20px;
 
-            font-weight: normal;
-            font-size: 1.6em;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+                background-color: green;
+                color: white;
 
-        div#area:hover {
-            background-color: rgb(27, 185, 27);
-            
-            cursor: pointer;
-        }
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1.4em;
+                font-weight: normal;
+                line-height: 200px;
+                text-align: center;
 
-    </style>
-</head>
-<body>
+                cursor: pointer;
+            }
 
-    <div id="area">
-        <p>Interaja...</p>
-    </div>
+            div#mouseenter {
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div id="click">Interaja...</div>
+        <div id="mouseenter">Interaja</div>
 
-    <script>
+        <script>
 
-        var area = window.document.getElementById('area')
+            var divClick = window.document.querySelector('div#click')
+            var divMouseEnter = window.document.querySelector('div#mouseenter')
 
-        area.addEventListener('click', clicar)
-        area.addEventListener('mouseenter', entrar)
-        area.addEventListener('mouseout', sair)
+            divClick.addEventListener('click', clicar)
+            divMouseEnter.addEventListener('mouseenter', entrar)
+            divMouseEnter.addEventListener('mouseout', sair)
 
-        function clicar() {
-            area.innerText = 'Clicou!'
+            function clicar() {
 
-            area.style.background = 'red'
-        }
+                var divClick = window.document.querySelector('div#click')
 
-        function entrar() {
-            area.innerText = 'Entrou'
-        }
+                divClick.style.background = 'darkblue'
+                divClick.innerText = 'Você clicou'
+            }
 
-        function sair() {
-            area.innerText = 'Saiu'
+            function entrar() {
+                var divMouseEnter = window.document.querySelector('div#mouseenter')
 
-            area.style.background = 'green'
-        }
+                divMouseEnter.style.background = 'yellow'
+                divMouseEnter.style.color = 'black'
+                divMouseEnter.innerText = 'Entrou'
+            }
 
-    </script>
-    
-</body>
+            function sair() {
+                var divMouseOut = window.document.querySelector('div#mouseenter')
+
+                divMouseOut.innerText = 'Saiu'
+                divMouseOut.style.background = 'darkred'
+                divMouseOut.style.color = 'white'
+            }
+
+        </script>
+    </body>
 </html>
