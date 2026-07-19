@@ -7,66 +7,55 @@
     <style>
 
         body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+
+            background-color: darkgray;
+
+            font-family: Arial, Helvetica, sans-serif;
             font-weight: normal;
-            font-size: 1.6em;
-            font-family: Arial, Helvetica, sans-serif;
-
-            background-color: rgb(196, 193, 193);
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        input {
-            margin: auto;
-            width: 75px;
-
-            font-weight: normal;
-            font-size: 0.8em;
-            font-family: Arial, Helvetica, sans-serif;
-            
-        }
-
-        input#botao {
-            border: none;
-            width: 90px;
-
-            background-color: blue;
-            color: white;
-            border-radius: 8px;
-
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.9em;
-            font-weight: bold;
-
-            cursor: pointer;
+            font-size: 1.4em;
         }
 
         div#soma {
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: row wrap;
+            gap: 20px;
+            
+            border: 1px solid rgb(129, 129, 129);
+            height: 150px;
+            width: 800px;
 
-            height: 40px;
-            width: 400px;
-            margin: auto;
-
-            text-align: center;
+            border-radius: 8px;
+            background-color: rgb(138, 137, 137);
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.452);
         }
 
-        div#res {
-            margin: 20px auto 0px auto;
-            width: 500px;
-            height: 200px;
+        input {
+            width: 70px;
+            height: 45px;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-bottom: 20px;
 
+            font-weight: normal;
+            font-size: 1.3em;
+        }
+
+        input.botao {
+            width: 90px;
+            height: 50px;
+            border: none;
+
+            border-radius: 8px;
             background-color: blue;
             color: white;
 
-            text-align: center;
-            line-height: 200px;
-        }
-
-        div#res::selection {
-            background-color: black;
+            font-size: .8em;
         }
 
     </style>
@@ -79,32 +68,28 @@
 
         <input type="number" name="txtn1" id="txtn1"> +
         <input type="number" name="txtn2" id="txtn2">
-        <input id="botao" type="button" value="Somar" onclick="somar()">
+        <input class="botao" type="button" value="Somar" onclick="somar()">
+        <div id="res">Resultado</div>
 
     </div>
 
-        <div id="res">Resultado</div>
-    
-
     <script>
 
-        function somar() {        
+        function somar() {
+            var tn1 = window.document.querySelector('input#txtn1')
+            var tn2 = window.document.querySelector('input#txtn2')
+            var divRes = window.document.querySelector('div#res')
 
-        var tn1 = window.document.getElementById('txtn1')
+            n1 = Number(tn1.value)
+            n2 = Number(tn2.value)
 
-        var tn2 = window.document.querySelector('input#txtn2')
+            soma = n1 + n2
 
-        var res = window.document.getElementById('res')
-
-        var n1 = Number(tn1.value)
-        var n2 = Number(tn2.value)
-
-        var s = n1 + n2
-        res.innerHTML = `A soma entre ${n1} e ${n2} e igual a <strong>${s}</strong>`
+            divRes.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${soma}</strong`
 
         }
 
     </script>
-    
+
 </body>
 </html>
