@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais</title>
+</head>
+<body>
+
+    Em qual país você mora? <input type="text" name="txtpais" id="pais">
+    
+    <input type="submit" value="Enviar" onclick="enviar()">
+
+    <div id="div-pais"></div>
+
+    <script>
+
+        function enviar() {
+            var pais = document.querySelector('input#pais')
+
+            var valor = (pais.value)
+
+            var divPais = document.querySelector('div#div-pais')
+
+            divPais.innerHTML = `<p>Vivendo em <strong>${valor}</strong></p>`
+
+            if (valor.toLowerCase() == 'brasil') {
+                divPais.innerHTML += `<p>Você é Brasileiro</p>`
+            } else {
+                divPais.innerHTML += `<p>Você é estrangeiro</p>`
+            }
+
+            
+
+        }
+
+    </script>
+
+</body>
+</html>
