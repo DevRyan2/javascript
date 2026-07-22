@@ -1,0 +1,37 @@
+html {
+    height: 100dvh;
+}
+
+body {
+    margin: 0px;
+
+    background-color: #3F83D5;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+
+header {
+    color: white;
+
+    text-align: center;
+    font-size: 1.3em;
+}
+
+section {
+    max-width: 500px;
+    margin: auto;
+    padding: 15px;
+    
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    color: white;
+
+    text-align: center;
+    font-style: italic;
+}
