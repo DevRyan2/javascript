@@ -1,18 +1,49 @@
 function contar() {
-    var inicio = document.querySelector('#inicio')
+    let inicio = document.querySelector('#txti');
+    let fim = document.querySelector('#txtf');
+    let passo = document.querySelector('#txtp');
+    let res = document.querySelector('#res');
 
-    var fim = document.querySelector('#fim')
+    if (
+        inicio.value.length == 0 ||
+        fim.value.length == 0 ||
+        passo.value.length == 0
+    ) {
 
-    var passo = document.querySelector('#passo')
+        res.innerHTML = 'Impossível contar!'
+        window.alert('[ERRO] Faltam os dados!');
 
-    var res = document.querySelector('div#res')
+    } else {
+        res.innerHTML = 'Contando: <br>';
 
-    var inicioValor = Number(inicio.value)
-    var fimValor = Number(fim.value)
-    var passoValor = Number(passo.value)
+        let i = Number(inicio.value);
+        let f = Number(fim.value);
+        let p = Number(passo.value);
 
-    for (inicioValor - 1; inicioValor <= fimValor; inicioValor += passoValor) {
-        console.log(inicioValor)
+        if (p <= 0){
+
+            window.alert('Passo inválido! Considerando PASSO 1')
+            
+            p = 1
+
+        }
+
+        if (i < f) {
+
+            for (let c = i; c <= f; c += p) { // contagem crescente
+                res.innerHTML += ` \u{1F449} ${c}`;
+
+            }
+
+        } else {
+
+            for (let c = i; c >= f; c -= p) { // contagem regressiva
+                res.innerHTML += ` \u{1F449} ${c}`;
+            }
+
+        }
+
+        res.innerHTML += ` \u{1F3C1}`;
+
     }
-
 }
