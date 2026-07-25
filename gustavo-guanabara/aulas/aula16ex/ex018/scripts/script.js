@@ -30,7 +30,7 @@ function inLista(n, l) {
     }
 
 }
-
+ 
 function adicionar() {
 
     if (isNumero(num.value) && !inLista(num.value, valores)) {
