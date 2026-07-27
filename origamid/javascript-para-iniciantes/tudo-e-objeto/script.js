@@ -1,52 +1,28 @@
-// Crie um objeto com os seus dados pessoais
-// Deve possuir pelo menos duas propriedades nome e sobrenome
+// nomeie 3 propriedades ou métodos de strings
 
-var dados = {
-    nome: 'Ryan',
-    sobrenome: 'Carlos Amorim Souza',
-    idade: 19,
-    estado: 'Rio de Janeiro',
-}
+var nome = 'Ryan'
 
-// Crie um método no objeto anterior, que mostre o seu nome completo
+console.log(nome.toLowerCase()) // para deixar o nome em minusculo
+console.log(nome.toUpperCase()) // para deixar o nome em maiusculo
+console.log(nome.length) // para saber quantas letras tem sua frase
 
-dados.nomeCompleto = function() {
+// nomeie 5 propriedades ou métodos de elementos do DOM
 
-    return `${this.nome} ${this.sobrenome}`
+var btn = document.querySelector('#btn')
 
-}
+btn.addEventListener('click', function(){
 
-// Modifique o valor da propriedade preco para 3000
+    console.log('Clicou')
 
-var carro = {
-  preco: 1000,
-  portas: 4,
-  marca: 'Audi',
-}
+})
 
-carro.preco = 3000
+// appendChild
+// style
+// innerHtml
 
-// Crie um objeto de um cachorro que represente um labrador,
-// preto com 10 anos, que late ao ver um homem
+btn.style.color = 'red'
 
-var cachorro = {
+// busque na web um objeto (método) capaz de interagir com o clipboard, 
+// clipboard é a parte do seu computador que lida com o CTRL + C e CTRL + V
 
-    raca: 'labrador',
-    cor: 'preto',
-    idade: 10,
-    latir(pessoa) {
-
-        if(pessoa === 'homem'){
-
-            return 'Late'
-
-        } else {
-
-            return 'Nada'
-
-        }
-
-    },
-
-}
 

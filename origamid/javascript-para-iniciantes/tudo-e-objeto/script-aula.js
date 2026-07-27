@@ -1,50 +1,15 @@
-var pessoa = {
-    nome: 'Ryan',
-    idade: 19,
-};
+var nome = 'Ryan';
 
-console.log(pessoa.nome);
+var nomeMinusculo = nome.toLowerCase();
 
-// =============================================
+// ===========================================
 
-var quadrado = {
-    lados: 4,
-    area(lado) {
-        return lado * lado;
-    },
+var btn = document.querySelector('#btn');
 
-    perimetro(lado) {
-        return this.lados * lado;
-    },
+btn.classList.add('azul'); // adiciona a class azul
 
-    cinco() {
-        return 5;
-    },
-};
+btn.innerText; // clique
 
-console.log(quadrado.area(5));
-console.log(quadrado.perimetro(5));
-
-// =============================================
-
-console.log(typeof console);
-
-// =============================================
-
-var menu = {
-    width: 800,
-    height: 100,
-    backgroundColor: '#84E',
-    metadeHeight() {
-        return this.height / 2;
-    },
-};
-
-menu.backgroundColor = '#000';
-menu.color = 'blue';
-
-menu.esconder = function () {
-    console.log('Escondi');
-};
-
-var bg = menu.backgroundColor;
+btn.addEventListener('click', function () {
+    console.log('Clicou');
+});
