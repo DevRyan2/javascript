@@ -1,5 +1,7 @@
 // Crie uma função para verificar se um valor é Truthy
 
+/*
+
 function verificarIdade(idade) {
 
     if(idade !== 'number') {
@@ -18,16 +20,26 @@ function verificarIdade(idade) {
 
 }
 
+*/
+
+function isTruthy(dado) {
+
+    return !!dado
+
+}
+
+console.log(isTruthy(null))
+
 // Crie uma função matemática que retorne o perímetro de um quadrado
 // lembrando: perímetro é a soma dos quatro lados do quadrado
 
 function areaQuadrado(lado) {
 
-    return lado * lado
+    return lado * 4
 
 }
 
-console.log(areaQuadrado(4))
+console.log(areaQuadrado(5))
 
 // Crie uma função que retorne o seu nome completo
 // ela deve possuir os parâmetros: nome e sobrenome
@@ -44,37 +56,46 @@ console.log(nomeCompleto('Ryan', 'Carlos Amorim souza'))
 
 function imparPar(n) {
 
-    if (n % 2 == 0) {
+    if (typeof n !== 'number') {
 
-        return 'Par'
+        return 'O valor digitado é inválido, tente novamente!'
 
     } else {
 
-        return 'Ímpar'
+        if (n % 2 == 0) {
+    
+            return 'Par'
+    
+        } else {
+    
+            return 'Ímpar'
+    
+        }
 
     }
 
+
 }
 
-console.log(imparPar(3))
+console.log(imparPar(4))
 
 // Crie uma função que retorne o tipo de
 // dado do argumento passado nela (typeof)
 
-function tipoDeDado(dados) {
+function tipoDeDado(dado) {
 
-    return typeof dados
+    return typeof dado
 
 }
 
-console.log(tipoDeDado(19))
+console.log(tipoDeDado(Array))
 
 // addEventListener é uma função nativa do JavaScript
 // o primeiro parâmetro é o evento que ocorre e o segundo o Callback
 // utilize essa função para mostrar no console o seu nome completo
-// quando o evento 'scroll' ocorrer.
+// quando o evento 'click' ocorrer.
 
-addEventListener('scroll', function () {
+addEventListener('click', function () {
 
     console.log('Ryan Carlos Amorim Souza')
 
