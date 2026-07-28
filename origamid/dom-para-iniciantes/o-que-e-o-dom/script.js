@@ -1,21 +1,24 @@
-// window.alert('Isso mesmo');
+// Retorne o url da página atual utilizando o objeto window
 
-const href = window.location.href;
+const href = window.location.href
 
-console.log(href);
+console.log(href)
 
-// ===============================================
+// Seleciona o primeiro elemento da página que
+// possua a classe ativo
 
-if (
-    href === 'http://127.0.0.1:5500/origamid/dom-para-iniciantes/o-que-e-o-dom/'
-) {
-    console.log('É igual');
-}
+const classAtivo = document.querySelectorAll('.ativo')[0]
 
-// ===============================================
+console.log(`A primeira class ativo é ${classAtivo.innerText}`)
 
-const h1Selecionado = document.querySelector('h1');
+// Retorne a linguagem do navegador
 
-// ===============================================
+const linguagemNavegador = window.navigator.language
 
-// alert('Teste')
+console.log(`A linguagem do navegador é ${linguagemNavegador}`)
+
+// Retorne a largura da janela 
+
+const larguraJanela = window.innerWidth
+
+console.log(`A largura da janela é de ${larguraJanela}px`)
