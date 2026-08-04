@@ -2,23 +2,29 @@
 
 const menu = document.querySelector('.menu');
 const footer = document.querySelector('.copy');
-const paragrafoFooter = footer.querySelector('p')
+const paragrafoFooter = footer.querySelector('p');
 
 const menuClone = menu.cloneNode(true);
 
-footer.appendChild(menuClone)
-footer.insertBefore(menuClone, paragrafoFooter)
+footer.insertBefore(menuClone, paragrafoFooter);
 
 // Selecione o primeiro DT da dl de Faq
 
-const faqLista = document.querySelector('.faq-lista')
+const faq = document.querySelector('.faq');
 
-const dt = faqLista.children[0]
+const dt = faq.querySelector('dt');
 
-console.log(dt)
+console.log(dt);
 
 // Selecione o DD referente ao primeiro DT
 
+const dd = dt.nextElementSibling;
 
+console.log(dd);
 
-// Substitua o conteúdo html de .faq pelo de .animais
+// Substitua o conteúdo html de .faq pelo de .animais]
+
+const animais = document.querySelector('.animais');
+
+faq.innerHTML = animais.innerHTML;
+
