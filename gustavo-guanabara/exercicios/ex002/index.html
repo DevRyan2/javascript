@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação JS</title>
+    <style>
+
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div {
+            border: 1px solid black;
+            width: 130px;
+            height: 60px;
+            padding: 20px;
+
+            text-align: center;
+            line-height: 60px;
+
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Interagindo com um botão</h1>
+
+    <div class="clicar">
+
+        Clica em mim!
+
+    </div>
+
+    <script>
+
+        const div = document.querySelector('.clicar')
+
+        div.addEventListener('click', clicar)
+
+        function clicar() {
+
+            window.alert('Você clicou no botão!')
+
+        }
+
+    </script>
+    
+</body>
+</html>
