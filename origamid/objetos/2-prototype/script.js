@@ -18,20 +18,15 @@ Pessoa.prototype.nomeCompleto = function(){
 }
 
 const ryan = new Pessoa('Ryan', 'Carlos Amorim Souza', 19)
+console.log(ryan.nomeCompleto())
 
 // Liste os métodos acessados por 
 // dados criados com NodeList,
 // HTMLCollection, Document
 
-const ulNodeList = document.querySelectorAll('ul') // node list
-const ulHtmlCollection = document.getElementsByTagName('ul')
-const documento = document
-
-// nodeList = item, entries, forEach, keys, values
-
-// HTMLcollection = item, namedItem
-
-// document = addEventListener, appendChild, click, cloneNode 
+console.log(Object.getOwnPropertyNames(NodeList.prototype))
+console.log(Object.getOwnPropertyNames(HTMLAllCollection.prototype))
+console.log(Object.getOwnPropertyNames(Document.prototype))
 
 // Liste os construtores dos dados abaixo
 
@@ -46,4 +41,5 @@ li.offsetLeft; // Number
 li.click(); // Undefined
 
 // Qual o construtor do dado abaixo:
-li.hidden.constructor.name; // Boolean
+
+li.hidden.constructor.name; // String
