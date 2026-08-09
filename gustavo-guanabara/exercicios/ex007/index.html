@@ -26,15 +26,15 @@
 </head>
 <body>
 
-    <h1>Trabalhando com números</h1>
+    <h1>Média do aluno v1.0</h1>
 
     <div class="clicar">
 
-        Clique para calcular
+        Calcular média
 
     </div>
 
-    <p class="paragrafo">O resultado vem aqui...</p>
+    <p class="paragrafo">O resultado vai aparecer aqui...</p>
 
     <script>
 
@@ -47,9 +47,16 @@
 
         function clicar() {
 
-            const n = Number(window.prompt('Digite um número:'))
+            const nome = window.prompt('Qual é o nome do aluno? ')
 
-            paragrafo.innerHTML = `O dobro de ${n} é ${n * 2} e a metade é ${n / 2}!`
+            const n1 = Number(window.prompt(`Qual foi a primeira nota de ${nome}? `))
+            const n2 = Number(window.prompt(`Além de ${n1}, qual foi a outra nota de ${nome}`))
+
+            paragrafo.innerHTML = `Calculando a média final de <mark>${nome}</mark>. <br>`
+
+            paragrafo.innerHTML += `As notas obtidas foram <mark>${n1} e ${n2}</mark>. <br>`
+
+            paragrafo.innerHTML += `A média final será <mark>${(n1 + n2) / 2}</mark>`
         }
 
     </script>

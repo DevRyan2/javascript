@@ -26,7 +26,7 @@
 </head>
 <body>
 
-    <h1>Trabalhando com números</h1>
+    <h1>Vários cálculos em JS</h1>
 
     <div class="clicar">
 
@@ -34,21 +34,20 @@
 
     </div>
 
-    <p class="paragrafo">O resultado vem aqui...</p>
+    <p class="paragrafo">O resultado vai aparecer aqui...</p>
 
     <script>
 
         const div = document.querySelector('.clicar')
         const paragrafo = document.querySelector('.paragrafo')
 
-        // window.alert('Seja bem-vindo(a) ao meu site!')
-
         div.addEventListener('click', clicar)
 
         function clicar() {
 
-            const n = Number(window.prompt('Digite um número:'))
+            const n = Number(window.prompt('Digite um número: '))
 
+            paragrafo.innerHTML = `O número a ser analisado aqui será o <strong>${n}</strong>`
             paragrafo.innerHTML = `O dobro de ${n} é ${n * 2} e a metade é ${n / 2}!`
         }
 

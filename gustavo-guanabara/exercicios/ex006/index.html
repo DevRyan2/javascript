@@ -47,9 +47,10 @@
 
         function clicar() {
 
-            const n = Number(window.prompt('Digite um número:'))
+            const n1 = Number(window.prompt('Digite um número: '))
+            const n2 = Number(window.prompt('Digite outro número: '))
 
-            paragrafo.innerHTML = `O dobro de ${n} é ${n * 2} e a metade é ${n / 2}!`
+            paragrafo.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${n1 + n2}</strong>!`
         }
 
     </script>
