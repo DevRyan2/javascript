@@ -106,7 +106,7 @@ carros2.unshift('Kia', 'Ferrari') // adiciona o elemento ao começo da array
 
 console.log(carros2)
 
-carros2.push('VW', 'Mercedes')
+carros2.push('VW', 'Mercedes') // adiciona ao final da array
 
 console.log(carros2)
 
@@ -115,9 +115,16 @@ console.log('=======================================')
 
 console.log('Utilizando [].shift() e [].pop()')
 
-const primeiroCarro = carros2.shift()
+console.log(carros2.pop()) // remove o ultimo item da array
 console.log(carros2)
 
-console.log(primeiroCarro)
+console.log(carros2.shift()) // remove o primeiro item da array
+console.log(carros2)
 
+console.log('=======================================')
+// -- / / -- / / -- / / -- / / -- / / -- / / -- / / -- / / -- / / -- / /
+
+console.log('Utilizando o [].reverse()')
+
+console.log(carros2.reverse()) // deixa a array de trás para frente
 
