@@ -31,6 +31,8 @@ const frutas1 = ['Banana', 'Pera'];
 const frutas2 = ['Banana', 'Pera'];
 const novaFruta = frutas1;
 
+console.log(Object.getOwnPropertyNames(Array.prototype))
+
 console.log(Object.is(frutas1, frutas2)); // verifica se os objetos sao iguais //false
 console.log(Object.is(frutas1, novaFruta)); // true
 
