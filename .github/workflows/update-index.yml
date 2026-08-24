@@ -1,0 +1,44 @@
+name: Atualizar índice de projetos
+
+on:
+    push:
+        branches:
+            - main
+
+permissions:
+    contents: write
+
+jobs:
+    atualizar-index:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Baixar repositório
+              uses: actions/checkout@v4
+
+            - name: Configurar Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 24
+
+            - name: Gerar index.html
+              run: node gerar-index.js
+
+            - name: Verificar alterações
+              id: changes
+              run: |
+                  if git diff --quiet index.html; then
+                    echo "changed=false" >> "$GITHUB_OUTPUT"
+                  else
+                    echo "changed=true" >> "$GITHUB_OUTPUT"
+                  fi
+
+            - name: Commitar novo índice
+              if: steps.changes.outputs.changed == 'true'
+              run: |
+                  git config user.name "github-actions[bot]"
+                  git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+                  git add index.html
+                  git commit -m "chore: update project index"
+                  git push
