@@ -7,8 +7,11 @@ import * as teste from './modules/teste.js';
 
 teste.testando();
 teste.teste2();
+console.log(teste.senha)
 
 initScrollSuave(); // scroll suave
 initAnimationScroll(); // animacao do scroll
 initAccordion(); // accordion
 initTabNav();
+
+console.log(this)
