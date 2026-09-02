@@ -1,0 +1,120 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-container.ativo {
+    display: flex;
+}
+
+.modal {
+    position: relative;
+
+    min-width: 300px;
+    padding: 40px;
+    border: 10px solid var(--amarelo-principal);
+
+    background-color: white;
+    box-shadow: 0 0 0 10px white;
+}
+
+.fechar {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+
+    width: 50px;
+    height: 50px;
+    border: 4px solid white;
+
+    border-radius: 50%;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
+    background-color: var(--vermelho-principal);
+    color: white;
+
+    font-size: 1.3rem;
+    font-family: var(--fonte-principal);
+
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        font-weight 0.3s ease;
+}
+
+.fechar:hover {
+    background-color: red;
+
+    font-weight: bold;
+}
+
+.modal label {
+    display: block;
+
+    margin: 1rem 0 0.5rem 0;
+
+    font-family: var(--fonte-principal);
+    font-weight: bold;
+}
+
+.modal input {
+    width: 100%;
+    padding: 0.7rem 0.5rem;
+}
+
+.modal button[type='submit'] {
+    display: block;
+
+    width: 100%;
+    margin-top: 1rem;
+    border: none;
+    padding: 0.7rem 0.2rem;
+
+    background-color: var(--vermelho-principal);
+    border-radius: 4px;
+    color: white;
+
+    font-size: 1rem;
+    font-family: var(--fonte-principal);
+    font-weight: bold;
+
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        font-weight 0.3s ease;
+}
+
+.modal button[type='submit']:hover {
+    background-color: red;
+    font-weight: bolder;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -30px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.ativo .modal {
+    animation: modal .3s forwards;
+}
