@@ -194,7 +194,7 @@ body {
 .dados li {
     margin-bottom: 1rem;
 
-    font-family:var (--fonte-texto);
+    font-family: var (--fonte-texto);
 }
 
 .dados li::before {
@@ -370,4 +370,22 @@ img {
     .copy {
         margin-bottom: 0px;
     }
+}
+
+[data-semana]::after {
+    display: inline-block;
+
+    width: 6px;
+    height: 6px;
+    margin-left: 4px;
+    border: 2px solid black;
+
+    background-color: var(--vermelho-principal);
+    border-radius: 50%;
+
+    content: '';
+}
+
+[data-semana].aberto::after {
+    background-color: #3f4;
 }

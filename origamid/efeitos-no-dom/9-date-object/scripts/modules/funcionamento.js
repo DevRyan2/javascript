@@ -1,15 +1,21 @@
-export default function initFunctionamento() { }
+export default function initFunctionamento() {
 
-const funcionamento = document.querySelector('[data-semana]');
+    const funcionamento = document.querySelector('[data-semana]');
+    const diasSemana = funcionamento.dataset.semana.split(',').map(Number);
+    const horarioSemana = funcionamento.dataset.horario.split(',').map(Number);
 
-const diasSemana = funcionamento.dataset.semana.split(',').map(Number);
-const horarioSemana = funcionamento.dataset.horario.split(',').map(Number);
-const dataAgora = new Date();
+    const dataAgora = new Date();
+    const diaAgora = dataAgora.getDay();
+    const horarioAgora = dataAgora.getHours();
 
-const diaAgora = dataAgora.getDay();
-const horarioAgora = dataAgora.getHours();
+    const semanaAberto = diasSemana.indexOf(diaAgora) !== -1;
 
-console.log(diasSemana);
-console.log(horarioSemana);
-console.log(diaAgora);
-console.log(horarioAgora)
+    const horarioAberto = (horarioAgora >= horarioSemana[0] && horarioAgora < horarioSemana[1]);
+
+    if (semanaAberto && horarioAberto) {
+
+        funcionamento.classList.add('aberto');
+
+    }
+
+}
