@@ -21,7 +21,7 @@
                 margin: 0 auto;
             }
 
-            input,
+            input[type="text"],
             textarea {
                 width: 100%;
                 border: 2px solid black;
@@ -56,6 +56,19 @@
 
             <label for="mensagem">Mensagem</label>
             <textarea name="mensagem" id="mensagem"></textarea>
+            <select name="cores" id="cores">
+
+                <option value="blue">Azul</option>
+                <option value="red">Vermelho</option>
+
+            </select>
+
+            <input type="color">
+            <input type="date">
+            <input type="number">
+            <input type="range">
+            <input type="password">
+
         </form>
 
         <span class="texto"></span>
@@ -66,20 +79,10 @@
 
             function handleKeyUp(event) {
 
-                const target = event.target;
+                console.log(event.target.value)
 
-                if (!target.checkValidity()) {
+                document.body.style.backgroundColor = event.target.value
 
-                    target.classList.add('invalido');
-
-                    target.nextElementSibling.innerText = target.validationMessage
-
-                }
-
-                console.log(event.target.checkValidity());
-
-                console.log(event.target.value);
-                texto.innerText = event.target.value;
             }
 
             contato.addEventListener('change', handleKeyUp);
